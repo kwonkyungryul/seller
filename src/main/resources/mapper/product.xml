@@ -13,4 +13,12 @@
         SELECT * FROM product_tb WHERE id = #{id}
     </select>
 
+    <update id="updateById">
+        UPDATE product_tb SET name = #{name}, price = #{price}, qty = #{qty} WHERE id = #{id}
+    </update>
+
+    <delete id="deleteById">
+        DELETE FROM product_tb WHERE id = #{id}
+    </delete>
+
 </mapper>

@@ -1,8 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="../layout/header.jsp" %>
 
-    <h1>Main Page</h1>
+    <h1>Detail Page</h1>
     <hr/>
+    <div class="" style="display: flex;">
+        <form action="/product/${product.id}/updateForm" method="get">
+            <button type="submit">수정</button>
+        </form>
+        <form action="/product/${product.id}/delete" method="post">
+            <button type="submit">삭제</button>
+        </form>
+
+    </div>
     <table border="1">
         <tr>
             <th>번호</th>
