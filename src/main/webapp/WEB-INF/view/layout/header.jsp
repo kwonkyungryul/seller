@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +9,15 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>INDEX PAGE</h1>
-</body>
-</html>
+
+<ul>
+    <c:if test="${principal == null}" >
+        <li><a href="/">홈</a></li>
+        <li><a href="/loginForm">로그인</a></li>
+    </c:if>
+    <c:if test="${principal != null}" >
+        <li><a href="/">홈</a></li>
+        <li><a href="/addForm">물품등록</a></li>
+        <li><a href="/logout">로그아웃</a></li>
+    </c:if>
+</ul>

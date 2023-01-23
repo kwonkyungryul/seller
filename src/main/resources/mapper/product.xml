@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="shop.mtcoding.seller.model.ProductRepository">
+
+    <select id="findAll" resultType="shop.mtcoding.seller.model.Product">
+        SELECT * FROM product_tb
+    </select>
+
+    <select id="findById" resultType="shop.mtcoding.seller.model.Product">
+        SELECT * FROM product_tb WHERE id = #{id}
+    </select>
+
+</mapper>
