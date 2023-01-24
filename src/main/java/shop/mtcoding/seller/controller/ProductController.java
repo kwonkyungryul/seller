@@ -60,4 +60,20 @@ public class ProductController {
 
         return "redirect:/";
     }
+
+    @GetMapping("/product/addForm")
+    public String addForm() {
+
+        return "product/addForm";
+    }
+
+    @PostMapping("/product/add")
+    public String add(Product product) {
+        int result = productRepository.insert(product);
+        if (result == -1) {
+            return "redirect:/notfound";
+        }
+
+        return "redirect:/";
+    }
 }

@@ -17,7 +17,7 @@
     </c:if>
     <c:if test="${principal != null}" >
         <li><a href="/">홈</a></li>
-        <li><a href="/addForm">물품등록</a></li>
+        <li><a href="/product/addForm">물품등록</a></li>
         <li><a href="/logout">로그아웃</a></li>
     </c:if>
 </ul>

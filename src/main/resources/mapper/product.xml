@@ -21,4 +21,8 @@
         DELETE FROM product_tb WHERE id = #{id}
     </delete>
 
+    <update id="insert">
+        insert into product_tb(name, price, qty, created_at) values(#{name}, #{price}, #{qty}, now());
+    </update>
+
 </mapper>
